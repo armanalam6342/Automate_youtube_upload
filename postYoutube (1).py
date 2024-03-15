@@ -19,7 +19,7 @@ import os
 import random
 
 
-df  = pd.read_csv("youtube/islamicShorts.csv")
+df  = pd.read_csv("youtube.csv")
 
 
 
@@ -30,23 +30,14 @@ file_path = df["path"][0]
 # In[5]:
 
 
-des = """Welcome to Islamic Insights, your source for enriching Islamic wisdom. 
-In this video, we bring you a collection of inspirational Islamic quotes that will illuminate your heart and mind. 
-From the timeless words of the Prophet Muhammad (peace be upon him) to the profound verses of the Quran, 
-these quotes offer guidance, comfort, and motivation for all aspects of life. 
-Join us on this spiritual journey as we delve into the depths of Islamic wisdom and reflect on the beauty of 
-faith, resilience, and gratitude. 
-Whether you seek solace in times of hardship or inspiration for daily living, 
-these quotes are a beacon of light for every soul. 
-Subscribe to Islamic Insights for more enlightening content and let the light of Islam illuminate your path. 
-#IslamicQuotes #Inspiration #Faith #Resilience #Gratitude #IslamicWisdom #Spirituality #IslamicInsights"""
+des = description
 
 
 # In[6]:
 
 
-title = "#IslamicVideo #IslamicWisdom #MuslimQuotes #QuranicWisdom"
-tags= "Islamic Teachings,Quranic Wisdom,Islamic Culture,Quran Explanation,Hadith Studies,Islamic Lifestyle,Muslim Faith,Islamic Scholars,Spiritual Growth Islam,Islamic Education,Contemporary Muslim Issues,Islamic Traditions,Islamic Heritage,Islamic Art and Architecture,Islamic Ethics,Interfaith Dialogue Islam,Islamic Science Contributions,islamic video,hadees,islamic history,islamic insignts,hindi islamic video,islamic video hindi"
+title = title
+tags= tags
 
 
 # In[7]:
@@ -79,7 +70,7 @@ run_upload_video(file_path,title,tags)
 
 
 
-df[1:].to_csv("youtube/islamicShorts.csv",index= False)
+df[1:].to_csv("youtube.csv",index= False)
 
 
 import pendulum
